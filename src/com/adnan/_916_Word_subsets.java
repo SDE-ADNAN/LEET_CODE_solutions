@@ -41,8 +41,42 @@ All the strings of words1 are unique.
 
 */
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class _916_Word_subsets {
     public static void main(String[] args) {
+         String[] words1 = {"amazon","apple","facebook","google","leetcode"};
+         String[] words2 ={"e","o"};
 
+         List<String> result = new ArrayList<>();
+
+         int[] target = new int[26];
+
+        for (String b:words2) {
+            int[] temp = new int[26];
+            for(char c:b.toCharArray()){
+                temp[c-'a']++;
+                target[c-'a']=Math.max(target[c-'a'],temp[c-'a']);
+            }
+        }
+
+        for(String a:words1){
+            int[] arr = new int[26];
+            for(char c:a.toCharArray()) arr[c-'a']++;
+            if(subset(arr,target)) result.add(a);
+        }
+
+        String k[] = result.toArray(new String[result.size()]);
+
+        System.out.println(Arrays.toString(k));
+    }
+
+    static boolean subset(int[] source,int[] dest){
+        for(int i=0;i<26;i++){
+            if(dest[i]>source[i]) return false;
+        }
+        return true;
     }
 }
