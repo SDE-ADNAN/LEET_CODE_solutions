@@ -52,6 +52,8 @@ public class _206_reverse_a_linked_list {
         linkedli.add(3);
         linkedli.add(4);
         linkedli.add(5);
+        linkedli.add(6);
+
 
 //        linkedli.add(new Integer(1));
 //        linkedli.add(new Integer(2));
@@ -68,11 +70,11 @@ public class _206_reverse_a_linked_list {
     {
         for (int i = 0; i < llist.size() / 2; i++) {
             Integer temp = llist.get(i);
-            System.out.println("1 == "+llist);
+//            System.out.println("1 == "+llist);
             llist.set(i, llist.get(llist.size() - i - 1));
-            System.out.println("2 == "+llist);
+            System.out.println("1 == "+llist);
             llist.set(llist.size() - i - 1, temp);
-            System.out.println("3 == "+llist);
+            System.out.println("2 == "+llist);
         }
 
         // Return the reversed arraylist
