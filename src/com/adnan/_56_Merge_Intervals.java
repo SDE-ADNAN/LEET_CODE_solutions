@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 public class _56_Merge_Intervals {
     public static void main(String[] args) {
+
         int[][] intervals = {{1,3},{2,6},{8,10},{15,18}};
 
         int[][] result= mergeIntervals(intervals);
@@ -13,7 +14,9 @@ public class _56_Merge_Intervals {
     }
 
     private static int[][] mergeIntervals(  int[][] intervals) {
+        // sorting the intervals array by comparing first element of the pair
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+        // using linked ist  as insertion and deletion are fast
         LinkedList<int[]> merged = new LinkedList<>();
         for (int[] interval : intervals) {
             // if the list of merged intervals is empty or if the current
