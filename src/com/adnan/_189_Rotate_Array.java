@@ -57,12 +57,18 @@ public class _189_Rotate_Array {
     }
 
     public static void rotate(int[] nums ,int k) {
+        System.out.println(k);
         k = k % nums.length;
+        System.out.println(k);
+        // reversing the array from 0 to its full length which will rotate the full array
         reverse(nums,0,nums.length-1);
+        // reversing elements from 0th index till the k-1th element
         reverse(nums,0,k-1);
+        // again resetting/reversing  the array from kth index to the full length of the array
         reverse(nums, k , nums.length-1);
     }
     public static void reverse(int[] nums ,int start ,int end){
+        // here we are just swapping between the start and end indices.
         while(start<end){
             int temp = nums[start];
             nums[start] = nums[end];
