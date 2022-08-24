@@ -1,4 +1,4 @@
-package com.adnan;
+package com.adnan._234th_palindrome_linked_list;
 
 /*
 234. Palindrome Linked List
