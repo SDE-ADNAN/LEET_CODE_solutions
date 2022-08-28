@@ -1,7 +1,9 @@
 package com.adnan;
 
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -53,22 +55,34 @@ int[] nums = {1,2,3};
     public static List<List<Integer>> solution(int[] nums){
         List<List<Integer>> res = new ArrayList<>();
         boolean[] visited = new boolean[nums.length];
+        System.out.println(Arrays.toString(visited));
         backtrack(res, nums,new ArrayList(),visited);
         return res;
     }
 
     static void backtrack(List<List<Integer>> res, int[] nums, List<Integer> curr, boolean[] visited){
+        // base case to check if the curr array's length is equal to the innput i.e the nums array.length
         if(curr.size() == nums.length){
+            // adding the formed permutation array to the res array
             res.add(new ArrayList<>(curr));
+            // terminating the recursive call stack.
             return;
         }
 
+        // main logic
+        // this will go from 0 to the length of the input i.e the nums array
         for(int i=0;i<nums.length; i++){
+            // if the ith index of visited is true then skip that iteration.
             if(visited[i] == true) continue;
+            // adding the ith element in the nums arrayList
             curr.add(nums[i]);
+            // and turning that specific element at that index true to say that it is visited
             visited[i] = true;
+            // again making recursive call to make the recursive tree
             backtrack(res,nums,curr,visited);
+            // removing the last element from the curr array
             curr.remove(curr.size()-1);
+            // and making that false atlast
             visited[i] = false;
         }
     }
