@@ -8,7 +8,10 @@ String s = "MCMXCIV";
         System.out.println(romanToInt(s));
     }
     static int romanToInt(String s){
-
+        // we will traverse the s string from the end and compare the i and i+1 if they are smaller or bigger
+        // then if the ith element is smaller than the i+1th element , at this time we will subtract the ith
+        // element with the i+1th element
+        // or if the element i is bigger than the i+1th then we will add it to the result.
         HashMap<Character,Integer> indexMap = new HashMap<Character,Integer>();
         indexMap.put('I',1);
         indexMap.put('V',5);
