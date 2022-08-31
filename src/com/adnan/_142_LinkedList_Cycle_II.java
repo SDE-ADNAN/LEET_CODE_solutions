@@ -1,5 +1,9 @@
 package com.adnan;
 
+/*
+  tutorial followed :- https://www.youtube.com/watch?v=pfA0VuvwpVg&ab_channel=XavierElon
+        */
+
 public class _142_LinkedList_Cycle_II {
 
     // class ListNode from Leetcode
@@ -23,7 +27,7 @@ public class _142_LinkedList_Cycle_II {
         if(intersect == null) return null;
         // star Listnode which is equal to head
         ListNode start = head;
-        // untill intersect is not equal to start
+        // until intersect is not equal to start
         while(intersect != start){
 //            move the start and intersect with speed of one node at a time
             start = start.next;
