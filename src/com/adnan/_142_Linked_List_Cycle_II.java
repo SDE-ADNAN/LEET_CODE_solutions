@@ -4,12 +4,12 @@ package com.adnan;
   tutorial followed :- https://www.youtube.com/watch?v=pfA0VuvwpVg&ab_channel=XavierElon
         */
 
-public class _142_LinkedList_Cycle_II {
+public class _142_Linked_List_Cycle_II {
 
     // class ListNode from Leetcode
     class ListNode {
         int val;
-        _141_Linked_List_Cycle.ListNode next;
+        ListNode next;
         ListNode(int x) {
             val = x;
             next = null;
