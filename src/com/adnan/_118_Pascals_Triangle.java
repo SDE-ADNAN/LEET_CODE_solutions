@@ -4,6 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _118_Pascals_Triangle {
+
+
+    /*
+    a pascals triangle is
+                              1
+                            1   1
+                          1   2   1
+                        1   3   3  1
+
+
+
+    * */
     public static void main(String[] args) {
 
     }
