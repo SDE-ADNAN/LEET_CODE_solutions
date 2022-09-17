@@ -1,6 +1,7 @@
 package com.adnan;
 
 public class _73_Set_Matrix_Zeroes {
+    // it was very complex at this time so in reserve to gothrough again in near future.
     public static void main(String[] args) {
 
     }
